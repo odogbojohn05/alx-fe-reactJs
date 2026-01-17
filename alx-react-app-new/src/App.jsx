@@ -3,16 +3,13 @@ import Header from './components/Header';
 import UserProfile from './components/UserProfile';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
+import Counter from './components/Counter';
 
 function App() {
   return (
-    <div>
+    <div style={{ padding: '20px' }}>
       <Header />
-      <UserProfile name="Ebube" age={25} bio="React developer from Benin City" />
+      <UserProfile name="john" age={23} bio="React developer from Benin City" />
       <MainContent />
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+      <div style={{ marginTop: '20px' }}>
+        <Counter />
