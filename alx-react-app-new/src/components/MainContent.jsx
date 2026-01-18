@@ -5,6 +5,9 @@ function MainContent() {
       <p style={{ marginTop: "10px" }}>
         Here you’ll find information about my favorite cities and more.
       </p>
+      <p style={{ marginTop: "10px", fontStyle: "italic", color: "darkblue" }}>
+        I love to visit New York, Paris, and Tokyo.
+      </p>
     </main>
   );
 }
