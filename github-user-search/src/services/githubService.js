@@ -1,10 +1,24 @@
 import axios from "axios";
 
-export async function fetchUserData(username) {
+const BASE_URL = "https://api.github.com/users";
+
+export async function fetchUser(username) {
   try {
-    const response = await axios.get(`https://api.github.com/users/${username}`);
-    return response.data;
-  } catch (error) {
-    throw new Error("Looks like we cant find the user");
+    const { data } = await axios.get(`${BASE_URL}/${username}`);
+    return data;
+  } catch (err) {
+    if (err?.response?.status === 404) throw new Error("User not found");
+    throw new Error(err?.message || "Failed to fetch user");
   }
 }
+
+export async function fetchUserRepos(username) {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/${username}/repos?per_page=100`);
+    return data;
+  } catch (err) {
+    throw new Error(err?.message || "Failed to fetch repositories");
+  }
+}
+
+export default { fetchUser, fetchUserRepos };

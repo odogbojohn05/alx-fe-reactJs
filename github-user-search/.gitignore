@@ -1,32 +1,25 @@
-# Node modules
 node_modules/
 
-# Build output
 dist/
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment variables
+
 .env
 .env.local
 .env.development
 .env.production
 .env.test
 
-# Editor directories and files
+
 .vscode/
 .idea/
 *.swp
 
-# Mac / Linux system files
+
 .DS_Store
 Thumbs.db
 
-# Optional: lock files (if you want to ignore them)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+
