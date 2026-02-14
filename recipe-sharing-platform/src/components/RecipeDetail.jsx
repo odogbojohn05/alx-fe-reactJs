@@ -11,7 +11,10 @@ function RecipeDetail() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
+      {/* Title */}
       <h1 className="text-3xl font-bold text-green-600 mb-4">{recipe.title}</h1>
+
+      {/* Image */}
       <img
         src={recipe.image}
         alt={recipe.title}
