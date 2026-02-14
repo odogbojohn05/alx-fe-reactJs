@@ -3,24 +3,93 @@
     "id": 1,
     "title": "Pancakes with Maple Syrup",
     "summary": "Fluffy pancakes served with butter and sweet maple syrup, perfect for breakfast.",
-    "image": "https://images.unsplash.com/photo-1588195539595-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1588195539595-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "2 tablespoons sugar",
+      "2 teaspoons baking powder",
+      "1/2 teaspoon salt",
+      "2 eggs",
+      "1 1/2 cups milk",
+      "2 tablespoons melted butter",
+      "Maple syrup for serving"
+    ],
+    "instructions": [
+      "In a bowl, mix flour, sugar, baking powder, and salt.",
+      "Whisk eggs, milk, and melted butter together.",
+      "Combine wet and dry ingredients until smooth.",
+      "Heat a pan and pour batter to form pancakes.",
+      "Cook until golden brown on both sides.",
+      "Serve warm with butter and maple syrup."
+    ]
   },
   {
     "id": 2,
     "title": "Grilled Salmon",
     "summary": "Tender salmon fillet grilled to perfection with lemon and herbs.",
-    "image": "https://images.unsplash.com/photo-1617196037303-5c3f6a8f7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1617196037303-5c3f6a8f7c1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "2 salmon fillets",
+      "1 lemon (sliced)",
+      "2 tablespoons olive oil",
+      "1 teaspoon garlic powder",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Preheat grill to medium-high heat.",
+      "Brush salmon with olive oil and season with garlic powder, salt, and pepper.",
+      "Place lemon slices on top of salmon.",
+      "Grill salmon for 4–5 minutes per side until cooked through.",
+      "Garnish with parsley and serve hot."
+    ]
   },
   {
     "id": 3,
     "title": "Vegetable Stir Fry",
     "summary": "A colorful mix of fresh vegetables stir-fried with soy sauce and garlic.",
-    "image": "https://images.unsplash.com/photo-1604908177522-040d6a2f3f9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1604908177522-040d6a2f3f9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "1 cup broccoli florets",
+      "1 red bell pepper (sliced)",
+      "1 carrot (sliced)",
+      "1 zucchini (sliced)",
+      "2 tablespoons soy sauce",
+      "2 cloves garlic (minced)",
+      "1 tablespoon sesame oil"
+    ],
+    "instructions": [
+      "Heat sesame oil in a wok or large pan.",
+      "Add garlic and sauté until fragrant.",
+      "Add broccoli, bell pepper, carrot, and zucchini.",
+      "Stir-fry vegetables for 5–7 minutes.",
+      "Add soy sauce and toss to coat evenly.",
+      "Serve hot with rice or noodles."
+    ]
   },
   {
     "id": 4,
     "title": "Chocolate Cake",
     "summary": "Rich and moist chocolate cake topped with creamy chocolate frosting.",
-    "image": "https://images.unsplash.com/photo-1601979031483-3ccde6f9e9c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1601979031483-3ccde6f9e9c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "1 1/2 cups all-purpose flour",
+      "1 cup sugar",
+      "1/2 cup cocoa powder",
+      "1 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "1 cup milk",
+      "1/2 cup vegetable oil",
+      "1 teaspoon vanilla extract",
+      "Chocolate frosting"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C).",
+      "Mix flour, sugar, cocoa powder, baking soda, and salt in a bowl.",
+      "Add milk, oil, and vanilla extract; mix until smooth.",
+      "Pour batter into a greased cake pan.",
+      "Bake for 30–35 minutes or until a toothpick comes out clean.",
+      "Cool and spread chocolate frosting on top before serving."
+    ]
   }
 ]
