@@ -11,9 +11,12 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold text-blue-600 mb-6">🍲 Recipe List</h1>
-      
+    <div className="bg-gray-100 min-h-screen p-6">
+      <h1 className="text-3xl font-bold text-blue-600 mb-6 text-center">
+        🍲 Recipe List
+      </h1>
+
+      {/* Responsive grid layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recipes.map((recipe) => (
           <div
@@ -26,7 +29,9 @@ function HomePage() {
               className="w-full h-48 object-cover rounded-t-lg"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold">{recipe.title}</h2>
+              <h2 className="text-xl font-semibold text-gray-800">
+                {recipe.title}
+              </h2>
               <p className="text-gray-600 mt-2">{recipe.summary}</p>
               <Link
                 to={`/recipe/${recipe.id}`}
