@@ -56,7 +56,7 @@ function AddRecipeForm() {
     <div className="bg-gray-100 min-h-screen flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg"
+        className="bg-white shadow-lg rounded-lg p-6 w-full md:max-w-xl"
       >
         <h1 className="text-2xl font-bold text-blue-600 mb-6 text-center">
           Add New Recipe
@@ -78,7 +78,7 @@ function AddRecipeForm() {
         <textarea
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
-          className="w-full border rounded p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400 md:h-24"
           placeholder="Enter ingredients separated by commas"
           rows="3"
         />
@@ -91,7 +91,7 @@ function AddRecipeForm() {
         <textarea
           value={steps}
           onChange={(e) => setSteps(e.target.value)}
-          className="w-full border rounded p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded p-2 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400 md:h-32"
           placeholder="Enter each step on a new line"
           rows="4"
         />
@@ -100,7 +100,7 @@ function AddRecipeForm() {
         
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+          className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition md:py-3"
         >
           Submit Recipe
         </button>
