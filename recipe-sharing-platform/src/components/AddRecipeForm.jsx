@@ -4,29 +4,62 @@ function AddRecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [steps, setSteps] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { title, ingredients, steps });
+
+    
+    if (!title.trim() || !ingredients.trim() || !steps.trim()) {
+      setError("All fields are required.");
+      return;
+    }
+
+    const ingredientList = ingredients.split(",").map((i) => i.trim());
+    if (ingredientList.length < 2) {
+      setError("Please include at least two ingredients.");
+      return;
+    }
+
+     
+    setError("");
+    const newRecipe = {
+      title,
+      ingredients: ingredientList,
+      instructions: steps.split("\n").map((s) => s.trim()),
+    };
+
+    console.log("New Recipe Submitted:", newRecipe);
+    alert("Recipe submitted successfully!");
+
+    
+    setTitle("");
+    setIngredients("");
+    setSteps("");
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg"
       >
-        <h1 className="text-2xl font-bold text-blue-600 mb-4 text-center">
+        <h1 className="text-2xl font-bold text-blue-600 mb-6 text-center">
           Add New Recipe
         </h1>
 
         
+        {error && (
+          <p className="text-red-500 mb-4 text-center font-medium">{error}</p>
+        )}
+
+    
         <label className="block mb-2 font-semibold">Recipe Title</label>
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full border rounded p-2 mb-4"
+          className="w-full border rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Enter recipe title"
         />
 
@@ -35,7 +68,7 @@ function AddRecipeForm() {
         <textarea
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
-          className="w-full border rounded p-2 mb-4"
+          className="w-full border rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Enter ingredients separated by commas"
           rows="3"
         />
@@ -45,7 +78,7 @@ function AddRecipeForm() {
         <textarea
           value={steps}
           onChange={(e) => setSteps(e.target.value)}
-          className="w-full border rounded p-2 mb-4"
+          className="w-full border rounded p-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Enter each step on a new line"
           rows="4"
         />
