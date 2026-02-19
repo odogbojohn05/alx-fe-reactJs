@@ -1,27 +1,20 @@
 import { useState } from "react";
 
 function RegistrationForm() {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.username || !formData.email || !formData.password) {
+
+    
+    if (!username || !email || !password) {
       alert("All fields are required!");
       return;
     }
-    console.log("Form submitted:", formData);
-    
+
+    console.log("Form submitted:", { username, email, password });
     alert("User registered successfully!");
   };
 
@@ -31,24 +24,24 @@ function RegistrationForm() {
         type="text"
         name="username"
         placeholder="Username"
-        value={formData.username}
-        onChange={handleChange}
+        value={username}   
+        onChange={(e) => setUsername(e.target.value)}
         className="border rounded px-3 py-2"
       />
       <input
         type="email"
         name="email"
         placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
+        value={email}      
+        onChange={(e) => setEmail(e.target.value)}
         className="border rounded px-3 py-2"
       />
       <input
         type="password"
         name="password"
         placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
+        value={password}   
+        onChange={(e) => setPassword(e.target.value)}
         className="border rounded px-3 py-2"
       />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
