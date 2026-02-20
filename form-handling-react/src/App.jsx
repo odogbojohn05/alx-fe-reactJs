@@ -1,4 +1,3 @@
-import FormikForm from "./components/formikForm";
 
 function App() {
   return (
@@ -6,7 +5,7 @@ function App() {
       <h1 className="text-2xl font-bold text-blue-600 mb-6">
         Formik Registration Form
       </h1>
-      <FormikForm />
+      <formikForm />
     </div>
   );
 }
